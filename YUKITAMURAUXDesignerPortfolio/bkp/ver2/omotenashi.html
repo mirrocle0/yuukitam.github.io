@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>YUKI TAMURA - UX/UI Designer</title>
+        <meta name="description" content="Omotenashi">
+    
+    <!-- CSS -->
+        <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <!-- ＃リンクのスムーズスクロール -->
+    <script>
+      $(function(){
+        // #で始まるリンクをクリックしたら実行されます
+        $('a[href^="#"]').click(function() {
+          // スクロールの速度
+          var speed = 800; // ミリ秒で記述
+          var href= $(this).attr("href");
+          var target = $(href == "#" || href == "" ? 'html' : href);
+          var position = target.offset().top;
+          $('body,html').animate({scrollTop:position}, speed, 'swing');
+          return false;
+        });
+      });
+
+      var startPos = 0,winScrollTop = 0;
+    $(window).on('scroll',function(){
+    winScrollTop = $(this).scrollTop();
+    if (winScrollTop >= startPos) {
+        if(winScrollTop >= 200){
+        $('.page-header').addClass('hide');
+        }
+    } else {
+        $('.page-header').removeClass('hide');
+    }
+    startPos = winScrollTop;
+});
+    </script>
+    <title>jQuery</title>
+
+    </head>
+
+
+    <body>
+        <div id="home" class="big-bg">
+
+                <header class="page-header wrapper">
+                    <h2 class="logo">Yuki Tamura</h2>
+
+                    <nav>
+                        <ul class="main-nav">
+                            <li><a href="#1">Work</a></li>
+                            <li><a href="#2">About</a></li>
+                            <li><a href="#3">Resume</a></li>
+                        </ul>
+                    </nav>
+                </header>
+        
+
+      
+    <div class="cover cover-background-1"></div>
+    
+    <div class="works-wrap">
+        <div class="each-section">
+            <div class="work-title">
+                Omotenashi
+            </div>
+            <p>Omotenashi is a mobile app that connects to Japanese and travelers to Japan.</p>
+
+
+        </div>
+        <div class="each-section">
+            <div class="work-eachsubtitle">
+                Concept Background
+            </div>
+            <div class="work-eachtitle">
+                The number of foreigners coming to Japan is dramatically increasing every year. 
+            </div>
+            <p>I am thrilled every time I hear visitors say <b>“I love going to Japan”</b>, or <b>“The food is amazing”</b>.</p>
+            <div class="work-image">
+                <img src="images/Thenumberofforeigners.png" alt="The number of foreigners coming to Japan">
+            </div>
+            <p>However, I’ve come to discover that the negative sentiment stems from the perception that there 
+                is always a communication barrier every time they travel to Japan.</p><br>
+                <p>From my personal experience with both Japanese and non-Japanese people,<br>
+                    ‍<b>both parties are interested in interacting with each other but they are lacking a platform to conveniently do so.</b><br>
+                    Therefore, I saw an opportunity to design an application to connect local Japanese folks with foreign travelers visiting Japan.</p>
+            <div class="work-image">
+                <img src="images/non-JP.png" alt="non-JP">
+                <img src="images/JP.png" alt="JP">
+            </div>
+        </div>
+
+        <div class="each-section">
+            <div class="work-eachtitle">
+                Challenge
+            
+            <div class="work-image">
+                <img src="images/challenge.png" alt="non-JP">
+            </div>
+            "How might I offer a platform where
+            Travelers & Local Japanese can connect?"
+            </div>
+        </div>
+
+        <div class="each-section">
+            <div class="work-eachsubtitle">
+                Quick peek to the solution
+            </div>
+            <div class="work-eachtitle">
+                Build a win-win situation for both. 
+            </div>
+            <p>Introducing Omotenashi, this mobile app lets users both Japanese and travelers to Japan meet 
+                and interact with each other by traveling, exploring local places, and even having coffee together. 
+                This platform can build a win-win situation for both travelers and local Japanese people by offering 
+                a platform to allow them to interact with each other.</p>
+        </div>
+
+        <div class="each-section">
+            <div class="work-eachsubtitle">
+                Design Process
+            </div>
+            <div class="work-eachtitle">
+                Build a context with iterations. 
+            </div>
+            <p>I conducted the end-to-end research and design process, from surveying both Japanese people and non-Japanese people to validating design decisions by usability testing with target users.
+                My design evolved through several rounds of iteration at different stages.</p>
+            <div class="work-image">
+                <img src="images/designprocess.png" alt="DesignProcess">
+            </div>
+        </div>
+
+        <div class="each-section">
+            <div class="work-eachsubtitle">
+                Research
+            </div>
+            <div class="work-eachtitle">
+                Understand the problem space. 
+            </div>
+            <p>At the research phase, I conducted a user survey and user interview to both Japanese 
+                and non-Japanese people to better understand the target audience. I also conducted 
+                a competitive analysis to identify their pain points.</p>
+            <div class="each-section">
+                <div class="work-subsection">
+                    User Survey
+                </div>
+                <p>I deployed the survey to non-Japanese people and Japanese people. 73 people were so willing to 
+                    take the survey I deployed. A sample of the various data got from the participants is shared here.</p>
+            </div>
+            <div class="each-section">
+                <div class="work-subsection">
+                    User Interview
+                </div>
+                <p>I conducted user interviews with 5 people, including both Japanese and non-Japanese people who have traveled to Japan,
+                    to dig deeper and better understand the data I received from the user survey.</p>
+                    <div class="work-image">
+                        <img src="images/interview.png" alt="User Interview">
+                    </div>
+            </div>
+            <div class="each-section">
+                <div class="work-subsection">
+                    Competitive Analysis
+                </div>
+                <p>I also analyzed multiple existing apps, including Meetup, Tinder, CouchSurfing, and TravelPal, to explore the current solutions that users are using to find a travel partner.
+                    From this research, I discovered three main issues that led to user frustration.</p>
+                
+                <div class="work-column">
+                    <div class="work-insidecolum">
+                        <div class="work-subsection">
+                            01: Not designed for Japanese people.
+                        </div>
+                        <p>There are some apps that support you to meet local people during your trip such as Couch Surfing, but most of them do not support the Japanese language. Also, there are no rating systems, therefore, this makes it difficult for Japanese people to trust random foreigners.</p>
+                    </div>
+                    <div class="work-insidecolum">
+                        <div class="work-subsection">
+                            02: Not focusing on casual meetups.
+                        </div>
+                        <p>Apps are not focusing on casual meetups. The Meetup app is not designed for a casual meetup. From the research, not a few people use Tinder to find a travel buddy or to make friends with local Japanese people. But the respondents noted that most of the time the interactions did not meet their expectations, because you know, it’s Tinder.</p>
+                    </div>
+                    <div class="work-insidecolum">
+                        <div class="work-subsection">
+                            03: Outdated UI and information overload.
+                        </div>
+                        <p>The UI on some apps are outdated or too much information on one screen which confuses and overwhelms users. There is a very good app called TravelPal for finding local people to show them around when you go travel to different countries, but the app is glitchy and design is outdated. As a result, the application received many reviews that complain about the app on the app store.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="each-section">
+                <div class="work-eachsubtitle">
+                    Extract insights
+                </div>
+                <div class="work-eachtitle">
+                    What are the opportunities?
+                </div>
+            </div>
+
+            <div class="each-section">
+                <div class="work-eachtitle">
+                    Problem statement
+                </div>
+                <p>At this stage, I defined the problem statement I was trying to solve. I realized most of the pain points were coming from Japanese people. Therefore, I decided to prioritize to optimize the app more for Japanese.</p>
+            </div>
+
+            <div class="each-section">
+                <div class="work-eachsubtitle">
+                    Ideation
+                </div>
+                <div class="work-eachtitle">
+                    What is the best for users?
+                </div>
+                <div class="each-section">
+                    <div class="work-subsection">
+                        Personas
+                    </div>
+                    <p>I created multiple Japanese and traveler’s personas based on the initial research. 
+                        The personas represent users’ goals and pain points which helped me prioritize different 
+                        user needs to guide the converging phase of my design process.</p><br>
+                    <p>Meet Akira who is a Japanese living in Japan, and Michael who is a traveler to Japan from Singapore.</p>
+                </div>
+            </div>
+            <div class="work-2column">
+                <div class="work-2insidecolumn">    
+                        <img src="images/Akira.png" class="border-radius shadow" alt="Akira">
+                </div>
+                <div class="work-2insidecolumn">
+                        <img src="images/Michael.png" class="border-radius shadow" alt="Michael">
+                </div>
+            </div>
+
+
+            <div class="each-section">               
+                    <div class="work-subsection">
+                        Possible Solutions
+                    </div>
+                    <p>I brainstormed for possible design features. During research phase, I always asked myself why? to each problems that users have to dig the pain point deeper and reach possible solutions.</p>
+                    <div class="work-image">
+                        <img src="images/Possiblesolutions.png" alt="Possible Solutions">
+                    </div>
+                    <p>I also used MoSCow Diagram to define the core of the product's features based on personas' needs.</p>
+                    <div class="work-image">
+                        <img src="images/Moscow.jpeg" class="border-radius" alt="MoSCow Diagram">
+                    </div>
+                    <div class="work-subsection">
+                        User Scenarios
+                    </div>   
+                    <p>Once I got what I want to have in my app, I mapped out user flow.</p> 
+                    <div class="work-image">
+                        <img src="images/scenarios.png" alt="User Scenarios">
+                    </div>             
+                </div>
+            </div>
+
+            <div class="each-section">
+                <div class="work-eachsubtitle">
+                    Design
+                </div>
+                <div class="work-eachtitle">
+                    Iteration, iteration and iteration.
+                </div>
+
+                <div class="work-subsection">
+                    Information Architecture
+                </div>
+                <p>Before starting any design, I conducted to create information architecture.</p>
+                <div class="work-image">
+                    <img src="images/informationarch.png" alt="Information Architecture">
+                </div>
+                <div class="work-subsection">
+                    Low-Fidelity Wireframe
+                </div>
+                <p>Nothing’s simpler than starting out with a good old pen and paper.</p>
+                <div class="work-image">
+                    <img src="images/lowfid.png" alt="Low-Fidelity Wireframe">
+                </div>
+                <div class="work-subsection">
+                    Mid-Fidelity Wireframe
+                </div>   
+                <p>For design reference and inspiration, I looked at some apps and got some inspiration.</p> 
+                <div class="work-image">
+                    <img src="images/midfid.png" alt="Mid-Fidelity Wireframe">
+                </div>    
+                <div class="work-subsection">
+                    Hi-Fidelity Wireframe
+                </div>   
+                <p>Finally, through usability testing and several rounds of iterations, I finally arrived at the designs shown today.</p> 
+            </div>
+        </div>
+    </div>  
+
+    <img src="images/Hi-Fidelity.png" alt="Hi-Fidelity Wireframe">
+
+    <div class="works-wrap">
+        <div class="each-section">
+            <div class="work-subsection">
+                Complexion Reduction Design
+            </div>
+            <p>“You open an app for its functionality, not its personality”
+                ‍Following these principles, I removed excess color for minimalization, I added white space, 
+                I adopted simple icons, I added bigger bolder, and darker headlines.</p>
+            <div class="work-image">
+                <img src="images/complexion.png" alt="Complexion Reduction Design">
+            </div>
+
+            <div class="work-subsection">
+                Refined User Flow
+            </div>
+            <p>Several rounds of usability testing helped me to achieve a better and simple flow for users.</p>
+            <div class="work-image">
+                <img src="images/refineduserflow.png" alt="Refined User Flow">
+            </div>
+        </div>
+
+        <div class="each-section">
+            <div class="work-eachtitle">
+                Core Experiences
+            </div>
+        </div>
+        
+        <div class="work-solution-column">
+            <div class="work-solution-column-text">
+                <p>From my research, I’ve implemented this badge to make it easier for Japanese people to meet travelers more easily than before because now they know they are okay with not speaking English fluently.</p>
+            </div>
+            <div class="work-solution-column-image">
+                <img src="images/image1.png" alt="DesignProcess">
+            </div>
+        </div>
+
+        <div class="each-section">
+            <div class="work-eachsubtitle">
+                Usability Testing
+            </div>
+            <div class="work-eachtitle">
+                XXXXX
+            </div>
+            <p>During the design phase, I conducted usability testing several times. Testing with users enables me to identify spaces for improvement and refine my design for better usability and experience that caters to users’ needs. Below are some design improvements that I made during the testing phase;</p>
+            
+            <div class="each-section">
+                <div class="work-subsection">
+                    Design change 1 — Change the way to rate experience
+                </div>
+                <p>I changed the way to rate experience with users. During the testing, some people mentioned that they would hesitate to rate users or they would only rate 1 or 5 because they can’t treat people like products on Amazon. I put five emojis that users can express their feeling and experience with other users.</p>
+                <div class="work-image">
+                    <img src="images/designchange1.png" alt="Design change 1 — Change the way to rate experience">
+                </div>
+                <div class="work-subsection">
+                    Design change 2 — Change the way to join the events
+                </div>
+                <p>I changed the way to join events. Initially, there was a “Request button” on the event page to send a request to the event host to join the event. But from the usability testing, I got some feedbacks such as “I want to chat with people to get to know each other first before meeting people.”, so I enabled event hosts to send the invitation to users who want to join when they feel meeting them.</p>
+                <div class="work-image">
+                    <img src="images/designchange2.png" alt="Design change 2 — Change the way to join the events">
+                </div>        
+            </div>
+
+            <div class="each-section">
+                <div class="work-eachtitle">
+                    Interactive Prototype
+                </div>
+                <iframe width="442" height="935" src="//invis.io/PFU4LRYE68D" frameborder="0" allowfullscreen></iframe>
+            </div>
+
+            <div class="each-section">
+                <div class="work-eachtitle">
+                    Reflection
+                </div>
+                <p>During this project, there were many iterations based on research, usability testing, and critiques from other designers and people around me. It was a long process, but I was excited as the designs become more optimized for the users. Being born in Japan and having lived most of my life in Japan, this app was something that I was really passionate about. There were so many things where I wanted to leverage my experience on this project, but I always kept this quote in my mind;</p>
+            <br>
+            <p><b>‍“As a designer, you need to remove your ego. You design things not for you, for others”.</b></p>
+            <br>
+            <p>‍It was also challenging that I needed to consider and approach things from two sides: both Japanese and non-Japanese perspectives, but trying something I have never done before is always exciting for me. I will keep polishing my design for this app and making it better for users and for myself as one of the designers.</p>
+            <br>
+            <p>I appreciate all my friends who have been supporting me and made me realize that learning different cultures is really fun.
+            </p>
+            <div class="work-image">
+                    <img src="images/Tokyofrds.jpeg" class= "border-radius" alt="Tokyo Friends">
+                    <div class="caption">
+                        <p>TOKYO FRIENDS<br>
+                            My best friends from Malaysia, US, and China, all living in Japan.</p>
+                    </div>
+            </div>  
+
+        </div>    
+
+        </div>
+
+
+    </div>
+
+            
+
+
+            <footer>
+                <div class="wrapper">
+                    <nav>
+                        <ul class="footer-nav">
+                            <li><a href="https://www.instagram.com/mirrorcle.wa01/"><img src="images/logo_instagram.png" alt="instagram"></a></li>
+                            <li><a href="https://dribbble.com/yukimirrorcle"><img src="images/logo_dribbble.png" alt="Dribbble"></a></li>
+                            <li><a href="https://medium.com/@mirrorcle.wa01"><img src="images/logo_medium.png" alt="Medium"></a></li>
+                            <li><a href="https://www.linkedin.com/in/yuki-tamura-4a9a30162"><img src="images/logo_linkedin.png" alt="LinkedIn"></a></li>
+                        </ul>
+                    </nav>
+        
+                    <p><small>&copy; Copyright 2020 Yuki Tamura.
+                        All rights reserved.
+                    </small></p>
+                </div>
+            </footer>
+
+    </body>
+</html>
