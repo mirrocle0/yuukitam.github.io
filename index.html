@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>YUKI TAMURA - UX/UI Designer</title>
+        <meta name="description" content="TAMURA YUKI UX/UI Designer">
+    
+    <!-- CSS -->
+        <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <!-- ＃リンクのスムーズスクロール -->
+    <script>
+      $(function(){
+        // #で始まるリンクをクリックしたら実行されます
+        $('a[href^="#"]').click(function() {
+          // スクロールの速度
+          var speed = 800; // ミリ秒で記述
+          var href= $(this).attr("href");
+          var target = $(href == "#" || href == "" ? 'html' : href);
+          var position = target.offset().top;
+          $('body,html').animate({scrollTop:position}, speed, 'swing');
+          return false;
+        });
+      });
+
+      var startPos = 0,winScrollTop = 0;
+    $(window).on('scroll',function(){
+    winScrollTop = $(this).scrollTop();
+    if (winScrollTop >= startPos) {
+        if(winScrollTop >= 200){
+        $('.page-header').addClass('hide');
+        }
+    } else {
+        $('.page-header').removeClass('hide');
+    }
+    startPos = winScrollTop;
+});
+    </script>
+    <title>jQuery</title>
+
+    </head>
+
+
+    <body>
+        <div id="home" class="big-bg">
+
+                <header class="page-header wrapper">
+                    <h2 class="logo">Yuki Tamura</h2>
+
+                    <nav>
+                        <ul class="main-nav">
+                            <li><a href="#1">Work</a></li>
+                            <li><a href="#2">About</a></li>
+                            <li><a href="#3">Resume</a></li>
+                        </ul>
+                    </nav>
+                </header>
+        
+
+            <div class="home-content wrapper">
+                <div class="title_wrapper">
+                    <h2 class="page-title">Hi, I'm Yuki.<br><span style="color:darkgray;">UX/UI Designer </span>in Vancouver.</h2>
+                </div>
+            </div><!-- /.home-content -->
+            
+            <div id="1">
+                <div class="cardblock">
+                    <div class="card__imgframe bg_1">
+                        <div class="withincard">
+                            <div class="card__titletext">
+                                <span style="font-size:50%;">UX/UI</span><br>
+                                Omotenashi
+                            </div>                  
+                            <div class="card__overviewtext">
+                                Mobile app that connects to Japanese
+                                and Travelers in Japan.
+                            </div>
+                            <a class="button" href="../YUKI TAMURA UX Designer Portfolio/omotenashi.html">View</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cardblock">
+                <div class="card__imgframe bg_2">
+                    <div class="withincard">
+                        <div class="card__titletext">
+                            <span style="font-size:50%;">UX</span><br>
+                            Beyond The Conversation
+                        </div>                  
+                        <div class="card__overviewtext">
+                            Redesign for a Vancouver local
+                            community website.
+                        </div>
+                        <a class="button" href="../YUKI TAMURA UX Designer Portfolio/omotenashi.html">View</a>
+                </div>
+            </div>
+
+            <div class="grid">
+                <div class="card__imgframe bg_1">
+                    <div class="withincard">
+                        <div class="card__titletext">
+                            <span style="font-size:50%;">UX</span><br>
+                            Beyond The Conversation
+                        </div>                  
+                        <div class="card__overviewtext">
+                            Redesign for a Vancouver local
+                            community website.
+                        </div>
+                        <a class="button" href="">View</a>
+                    </div>
+                </div>
+            </div>
+
+        </div><!-- /#Home -->
+
+        <div id="2">
+            <div class="background">
+                <div class="home-content wrapper">
+                    <div class="profile_title">
+                        Raised in Japan,<br>
+                        Living in Vancouver.
+                        
+                    </div>
+                    <div class="profile_bodytext">
+                        I am a UX/UI designer who strives to create simple and intuitive experiences for users.<br>
+                        <br>
+                        I used to be an application developer at IBM Japan and<br>
+                        the experience there led me to study design and become a UX/UI designer.<br>
+    ‍                    <br>
+                        I moved to Vancouver because I love to immerse myself in different cultures.<br>
+                        Coming from different cultural background, I solve problems with global users in mind.<br>
+                        <br>
+                        and I also love traveling, sushi and talking about technology!
+                    </div>
+                    <div class="profile_last1">
+                        Shall we talk?<br><span style="font-size:50%;">mirrorcle.wa01@gmail.com</span><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+            <footer>
+                <div class="wrapper">
+                    <nav>
+                        <ul class="footer-nav">
+                            <li><a href="https://www.instagram.com/mirrorcle.wa01/"><img src="images/logo_instagram.png" alt="instagram"></a></li>
+                            <li><a href="https://dribbble.com/yukimirrorcle"><img src="images/logo_dribbble.png" alt="Dribbble"></a></li>
+                            <li><a href="https://medium.com/@mirrorcle.wa01"><img src="images/logo_medium.png" alt="Medium"></a></li>
+                            <li><a href="https://www.linkedin.com/in/yuki-tamura-4a9a30162"><img src="images/logo_linkedin.png" alt="LinkedIn"></a></li>
+                        </ul>
+                    </nav>
+        
+                    <p><small>&copy; Copyright 2020 Yuki Tamura.
+                        All rights reserved.
+                    </small></p>
+                </div>
+            </footer>
+
+    </body>
+</html>
